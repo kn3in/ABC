@@ -1,4 +1,5 @@
 library(shiny)
+library(knitr)
 source("functions.R", local=TRUE)
 
 shinyServer(function(input, output) {
@@ -8,7 +9,8 @@ shinyServer(function(input, output) {
   })
   
   output$result <- renderText(
-      knit2html(text = paste0("$h^2_l$: ", round(resultValue(), digits = 2)))
+      paste(knit2html(text = paste0("$h^2_l$: ", round(resultValue(), digits = 3))),
+      tags$script("MathJax.Hub.Queue([\"Typeset\",MathJax.Hub]);"))
   )
   
 })

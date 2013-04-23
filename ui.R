@@ -1,5 +1,4 @@
 library(shiny)
-library(knitr)
 
 shinyUI(pageWithSidebar(
   headerPanel("ABC: A Better Coefficient of Determination for Genetic Profile Analysis"),
