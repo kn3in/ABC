@@ -7,7 +7,7 @@ shinyUI(pageWithSidebar(
       h4("Input"),
       wellPanel(sliderInput("k", "Disease Prevalence:", min=0, max=0.5, value=0.01),
       helpText("Prevalence of disease in the population")),
-      wellPanel(sliderInput("r2n", "Nagelkerke's R2 value:", min=0, max=1, value=0.2),
+      wellPanel(uiOutput("r2n_ui"),
       helpText("Nagelkerke's R2N value obtained from a logistic regression in a case-control sample")),
       wellPanel(sliderInput("p", "P:", min=0, max=1, value=0.5),
       helpText("The proportion of cases in the case-control sample from which R2N was estimated"))),
