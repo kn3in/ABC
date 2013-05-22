@@ -11,6 +11,7 @@ result_h2l <- function(k, r2n, p) {
 }
 
 limit_r2n <- function(k, p) {
+
 	x <- qnorm(1 - k)
 	z <- dnorm(x)
 	i <- z / k
@@ -19,4 +20,5 @@ limit_r2n <- function(k, p) {
 	e <- 1 - p^(2 * p) * (1 - p)^(2 * (1 - p))
 	r2n <- -1 / (cc * e * theta -cc * e)
 	min(1, r2n)
+
 }
