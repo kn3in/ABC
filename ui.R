@@ -1,4 +1,5 @@
 library(shiny)
+source("custom_html.R")
 
 shinyUI(pageWithSidebar(
   headerPanel("ABC: A Better Coefficient of Determination for Genetic Profile Analysis"),
