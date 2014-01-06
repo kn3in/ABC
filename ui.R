@@ -18,8 +18,8 @@ shinyUI(pageWithSidebar(
           h4("Result"),
           p("Proportion of variance in liability explained by the predictor:"),
           htmlOutput("result"),
-          p("Via equation 15 of Lee et al. (see below) convert Nagelkerke's R2 to an R2 in liability at the population level.")),
-        wellPanel(h4("Citation:"),
+          p("Via equation 15 of Lee et al. (see citation) convert Nagelkerke's R2 to an R2 in liability at the population level.")),
+        wellPanel(h4("Citation"),
         p("Lee SH, Goddard ME, Wray NR, Visscher PM. (2012)", a(href="http://onlinelibrary.wiley.com/doi/10.1002/gepi.21614/abstract", "A better coefficient of determination for genetic profile analysis."), "Genet Epidemiol. 2012 Apr")),
         wellPanel(
         HTML('<a href="https://github.com/kn3in/ABC"><img src="img/GitHub-Mark-120px-plus.png" width=50 /> </a>'))
